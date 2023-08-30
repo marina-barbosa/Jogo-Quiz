@@ -10,7 +10,7 @@ Um Quiz Game inspirado no Kahoot, desenvolvido em p5.js! Este projeto tem como o
 
 1. **Acesso ao Jogo:** Certifique-se de ter um navegador web moderno instalado e conexão com a Internet para executar o jogo sem problemas.
 
-    [link em breve - Clique aqui]() para jogar agora!
+    [Clique aqui](https://marina-barbosa.github.io/Jogo-Quiz/) para jogar agora!
 
 2. **Respondendo às Perguntas:** À medida que o quiz progride, perguntas serão exibidas na tela principal. O jogador deve selecionar a opção correta entre as alternativas apresentadas.
 
