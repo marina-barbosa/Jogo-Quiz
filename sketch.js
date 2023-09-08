@@ -25,6 +25,11 @@ let tadaanPlay = false;
 let seletorX = 795;
 let seletorY = 260;
 
+let timer = false;
+let timerTxt = 'TIMER OFF';
+let timerColor = 'red';
+let relogio;
+
 let input;
 
 let nickname = 'Hortência';
@@ -61,6 +66,8 @@ function preload() {
     perfil5 = loadImage('imagens/perfil-5.png');
     perfil6 = loadImage('imagens/perfil-6.png');
 
+    relogio = loadImage('imagens/relogio.png');
+
 }
 
 function setup() {
@@ -78,10 +85,14 @@ function draw() {
     }
     if (stage == 1) {
         persona();
-        introPlay = false;
+        if (introPlay == false) {
+            intro.play();
+            introPlay = true;
+        }
     }
     if (stage == 2) {
         menu();
+        introPlay = false;
     }
     if (stage == 3) {
         seletorX = 795;
@@ -97,10 +108,7 @@ function draw() {
 }
 
 function nick() {
-    if (introPlay == false) {
-        intro.play();
-        introPlay = true;
-    }
+
     background(backgroundImg0);
 
     fill(250); // cor 
@@ -291,26 +299,36 @@ function menu() {
     strokeWeight(2); // borda 
     rect(550, 460, 200, 40);
 
+    fill(timerColor);
+    stroke(0); // cor
+    strokeWeight(2); // borda 
+    rect(550, 560, 200, 40);
+
     fill(30); // cor 
     noStroke();
     textSize(20); // tamanho da fonte     
     textStyle(BOLD);
     textAlign(CENTER);
-    text(`FACIL`, width / 2, 283); //680, 283
+    text(`FACIL (10)`, width / 2, 283); //680, 283
 
     fill(30); // cor 
     noStroke();
     textSize(20); // tamanho da fonte     
     textStyle(BOLD);
-    text(`MEDIO`, width / 2, 383);
+    text(`MEDIO (10)`, width / 2, 383);
 
     fill(30); // cor 
     noStroke();
     textSize(20); // tamanho da fonte     
     textStyle(BOLD);
-    text(`DIFICIL`, width / 2, 483);
+    text(`DIFICIL (25)`, width / 2, 483);
 
-    //tocar(button);
+    fill(30); // cor 
+    noStroke();
+    textSize(20); // tamanho da fonte     
+    textStyle(BOLD);
+    text(`${timerTxt}`, width / 2, 583);
+
 
 
     if (mouseIsPressed) {
@@ -380,6 +398,14 @@ function quiz() {
     } else {
         background(backgroundImg3);
     }
+
+    image(relogio, 1015, 160, 100, 100);
+    fill(250);
+    circle(1070, 215, 50);
+    fill(30);
+    textSize(30);
+    textStyle(BOLD);
+    text(`15`, 980, 170, 100, 100);
 
     image(perfil, 175, 160, 100, 100);
     noFill();
@@ -492,6 +518,14 @@ function intervalo() {
         background(backgroundImg3);
     }
 
+    image(relogio, 1015, 160, 100, 100);
+    fill(250);
+    circle(1070, 215, 50);
+    fill(30);
+    textSize(30);
+    textStyle(BOLD);
+    text(`15`, 980, 170, 100, 100);
+
     image(perfil, 175, 160, 100, 100);
     noFill();
     stroke(0); // cor
@@ -569,18 +603,49 @@ function rank() {
     fill(220);
     stroke(0); // cor
     strokeWeight(2); // borda    
-    rect(500, 100, 300, 550, 10);
+    rect(500, 100, 300, 350, 10);
 
     // texto 
     fill(70); // cor 
     textSize(24); // tamanho da fonte
     textAlign(CENTER, CENTER);
     textStyle(NORMAL);
-    text(`${podio}`, 305, 100, 690, 200);
+    text(`${podio}`, 305, 250, 690, 200);
+
+    image(perfil, 600, 160, 100, 100);
+    noFill();
+    stroke(0); // cor
+    strokeWeight(2); // borda 
+    rect(600, 160, 100, 100);
+
+    fill(200);
+    stroke(0); // cor
+    strokeWeight(2); // borda 
+    rect(550, 560, 200, 40);
+
+    fill(30); // cor 
+    noStroke();
+    textSize(20); // tamanho da fonte     
+    textStyle(BOLD);
+    text(`COMPARTILHAR`, width / 2, 583);
 
 }
 
 function mouseReleased() {
+    if (stage == 2) {
+        if (mouseX >= 550 && mouseX <= 750 && mouseY >= 560 && mouseY <= 600) {
+            tocar(button);
+            if (!timer) {
+                timer = true;
+                timerTxt = 'TIMER ON';
+                timerColor = 'green';
+            } else {
+                timer = false;
+                timerTxt = 'TIMER OFF';
+                timerColor = 'red';
+            }
+        }
+    }
     if (stage == 4) {
         // troca de pergunta 
         if (mouseX >= 10 && mouseX <= 645 && mouseY >= 380 && mouseY <= 530) {
@@ -644,6 +709,11 @@ function mouseReleased() {
             indice = 0;
             podio.push(pontos)
             pontos = 0;
+        }
+    }
+    if (stage == 5) {
+        if (mouseX >= 550 && mouseX <= 750 && mouseY >= 560 && mouseY <= 600) {
+            tocar(button);
         }
     }
 }

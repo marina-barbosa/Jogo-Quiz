@@ -102,13 +102,11 @@ const alternativaM = [
 
 //// DIFICIL
 const perguntaD = [
-    `1 - 
-const array = [1, 2, 3];
+    `1 - const array = [1, 2, 3];
 const resultado = array.unshift(4, 5);
 console.log(array);
 Qual será o conteúdo do array após a execução deste código?`,
-    `2 - 
-const array = [1, 2, 3];
+    `2 - const array = [1, 2, 3];
 const retorno = array.push(4, 5);
 console.log(retorno);
 Qual será a saída deste código?`,
@@ -118,8 +116,7 @@ const poppedElement = array.pop();
 const shiftedElement = array.shift();
 console.log(poppedElement + shiftedElement);
 Qual será o valor impresso no console após a execução deste código?`,
-    `5 - 
-const array = [1, 2, 3, 4, 5];
+    `5 - const array = [1, 2, 3, 4, 5];
 delete array[2];
 array.splice(2, 1);
 console.log(array);
@@ -132,47 +129,36 @@ Qual será o valor impresso no console?`,
     [   [5, 6], [7, 8]  ]   ];
 console.log(matriz[1][0][1])
 Como você acessaria o número 6 nesta matriz ?`,
-    `8 -
-const zero = 0;
+    `8 - const zero = 0;
 const positivos = [1, 2, 3];
 const negativos = [-3, -2, -1];
 let numeros = negativos.concat(zero, positivos);
-qual o valor do array numeros ?`,
-    `9 -
-const numeros = [10, 20, 30, 40, 50];
+Qual o valor do array numeros ?`,
+    `9 - const numeros = [10, 20, 30, 40, 50];
 Qual das seguintes expressões é verdadeira?`,
-    `10 -
-Qual é o resultado da seguinte expressão ?
+    `10 - Qual é o resultado da seguinte expressão ?
 let numeros = [1, 2, 3]
 numeros.forEach(x => console.log(x % 2 === 0));`,
-    `11 -
-Qual é o resultado da seguinte expressão ?
+    `11 - Qual é o resultado da seguinte expressão ?
 const numeros = [10, 20, 30, 40];
 numeros.filter(num => num < 25).filter(num => num > 15);`,
-    `12 -
-Suponha que queremos transformar cada nome em um apelido adicionando "inho" no final.Qual das seguintes expressões usando map() faz isso corretamente ?
+    `12 - Suponha que queremos transformar cada nome em um apelido adicionando "inho" no final.Qual das seguintes expressões usando map() faz isso corretamente ?
 const nomes = ["Paul", "Bob", "David"];`,
-    `13 -
-const numeros = [1, 2, 3, 4, 5];
+    `13 - const numeros = [1, 2, 3, 4, 5];
 Qual das seguintes expressões usando reduce() calcula a soma dos números do array, começando com um valor inicial de 10 ?`,
-    `14 -
-Quantos dos metodos a seguir existem no JavaScript ?
+    `14 - Quantos dos metodos a seguir existem no JavaScript ?
 entries(), keys(), e values()`,
-    `15 -
-O método Array.from() em JavaScript permite criar um novo array a partir de um objeto iterável.`,
+    `15 - O método Array.from() em JavaScript permite criar um novo array a partir de um objeto iterável.`,
     `16 - let numeros = [1, 2, 3, 4, 5, 6]
 console.log(numeros.fill(0, 2))
 No exemplo anterior, todas as posições do array terão o valor 0, a partir da posição 2([1, 2, 0, 0, 0, 0])
-mas Se aplicarmos o método numeros.fill(0, 2, 4), qual será o resultado ?
-let numeros = [1, 2, 3, 4, 5, 6]
-numeros.fill(0, 2, 4)`,
-    `17 -
-let array = [1, 2, 3, 4, 5, 6];
+mas se aplicarmos o método numeros.fill(0, 2, 4), qual será o resultado ?`,
+    `17 - let array = [1, 2, 3, 4, 5, 6];
 array.copyWithin(0, 3);
 O exemplo anterior resulta em: [4, 5, 6, 4, 5, 6]
-mas se aplicarmos array.copyWithin(0, 4, 6), qual sera o resulta ?`,
-    `18 -
-Qual é o resultado dessa expressao ?
+mas se aplicarmos array.copyWithin(0, 4, 6),
+ qual sera o resulta ?`,
+    `18 - Qual é o resultado dessa expressao ?
 let array = [2, 36, 1, 3, 14, 25];
 array.sort().reverse();`,
     `19 - const numeros = [10, 20, 20, 30, 40, 50];
@@ -186,18 +172,15 @@ if (maleta.find((i) => i === 'lupa')) {
     return console.log(maleta.includes('bug'));
 } else { return maleta.includes('lanterna');    }
 Qual será o retorno?`,
-    `21 -
-let numeros = [1, 2, 3];
+    `21 - let numeros = [1, 2, 3];
 numeros = numeros.toString()
 console.log(numeros + '4');
 Qual sera o resultado no console ?`,
-    `22 -
-const array = ['Canopus', 'é', 1, 'gigante', 'branca'];
+    `22 - const array = ['Canopus', 'é', 1, 'gigante', 'branca'];
 const resultado = array.join(' ');
 console.log(resultado);
 Qual é o resultado ?`,
-    `23 -
-const comidas = ["Pizza", "Sushi", "Hamburguer", "Lasanha", "Coxinha"];
+    `23 - const comidas = ["Pizza", "Sushi", "Hamburguer", "Lasanha", "Coxinha"];
 const preferida = comidas.slice(1, 3);
 console.log(preferida)
 Qual o resultado no console ?`,
