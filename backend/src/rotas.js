@@ -3,8 +3,8 @@ const knex = require('./database.js');
 
 const rotas = express();
 
-
-rotas.get('/linha', async (req, res) => {
+//rota teste
+rotas.get('/teste', async (req, res) => {
     try {
         await knex('teste').insert({ linha: 'banco ok' });
         console.log('console.log ok')
@@ -14,5 +14,7 @@ rotas.get('/linha', async (req, res) => {
         return res.status(500).json(error);
     }
 });
+
+
 
 module.exports = rotas;

@@ -63,4 +63,11 @@ function rank() {
     textStyle(BOLD);
     text(`COMPARTILHAR`, width / 2, 583);
 
+    // enter
+    fill('yellow'); // cor       
+    textSize(24); // tamanho da fonte 
+    textAlign(CENTER);
+    textStyle(BOLDITALIC);
+    text(`tecla 'Enter' para sair`, 645, 727);
+
 }

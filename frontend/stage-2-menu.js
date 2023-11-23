@@ -98,6 +98,13 @@ function menu() {
     textStyle(BOLD);
     text(`${nickname}`, 10, 727);//735 sem o center
 
+    // enter
+    fill(30); // cor 
+    textSize(24); // tamanho da fonte 
+    textAlign(CENTER);
+    textStyle(BOLDITALIC);
+    text(`tecla 'Enter' para continuar`, 645, 727);
+
     // caixa pontos
     fill(50);
     noStroke(); // cor da borda        

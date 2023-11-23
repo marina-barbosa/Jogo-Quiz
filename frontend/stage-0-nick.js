@@ -14,5 +14,13 @@ function nick() {
     input.position(CENTER, CENTER);
     input.size(200, 40);
 
+    // enter
+    fill(30); // cor 
+    noStroke(0); // cor    
+    textSize(24); // tamanho da fonte 
+    textAlign(CENTER);
+    textStyle(BOLDITALIC);
+    text(`tecla 'Enter' para continuar`, 645, 727);
+
 
 }

@@ -1,22 +1,4 @@
 
-function nick() {
-
-    background(backgroundImg0);
-
-    fill(250); // cor 
-    stroke(0); // cor
-    strokeWeight(10); // borda
-    textSize(140); // tamanho da fonte
-    textAlign(CENTER, CENTER);
-    textStyle(BOLDITALIC);
-    text(`Mahoot?`, 305, 100, 690, 200);
-
-    input.position(CENTER, CENTER);
-    input.size(200, 40);
-
-
-}
-
 function persona() {
     if (!backgroundImg3) {
         background(backgroundImg0);
@@ -153,6 +135,13 @@ function persona() {
     textStyle(BOLD);
     text(`${nickname}`, 10, 727);
 
+    // enter
+    fill(30); // cor 
+    textSize(24); // tamanho da fonte 
+    textAlign(CENTER);
+    textStyle(BOLDITALIC);
+    text(`tecla 'Enter' para continuar`, 645, 727);
+
     // caixa pontos
     fill(50);
     noStroke(); // cor da borda        
@@ -165,6 +154,12 @@ function persona() {
     textAlign(RIGHT);
     textStyle(NORMAL);
     text(`${pontos}`, 1273, 727);
+
+    // // botao next
+    // fill(50);
+    // stroke(0); // cor
+    // strokeWeight(2); // borda        
+    // rect(300, 300, 300, 300, 5);
 
 
 }
