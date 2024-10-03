@@ -3,7 +3,7 @@
 Um Quiz Game inspirado no Kahoot, desenvolvido em p5.js! Este projeto tem como objetivo proporcionar uma experiência interativa e divertida para os participantes das reuniões do Clube de leitura do curso Desenvolvimento Backend da Cubos Academy e está em fase beta de desenvolvimento. O código-fonte do jogo está disponível neste repositório e pode ser adaptado e estendido conforme necessário. Sinta-se à vontade para fazer melhorias, corrigir bugs e adicionar novos recursos.
 <div align='center'>
   
-<div align='center'>  
+
 
 ![GIF](https://github.com/marina-barbosa/Jogo-Quiz/blob/main/imagens/2024-01-1009-00-04-ezgif.com-crop.gif) 
 </div>
